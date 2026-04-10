@@ -1,0 +1,73 @@
+site_name: AI Dev Landscape
+site_url: https://liudengzhang.github.io/ai-dev-landscape/
+site_description: "The AI developer ecosystem moves weekly. This is my map."
+repo_url: https://github.com/LiudengZhang/ai-dev-landscape
+repo_name: LiudengZhang/ai-dev-landscape
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.integrate
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Fundamentals:
+    - LLM Training Pipeline: fundamentals/training-pipeline.md
+    - Scaling and Distillation: fundamentals/scaling.md
+  - Inference:
+    - Local Inference: inference/local.md
+    - Serving at Scale: inference/serving.md
+  - Coding Assistants:
+    - Overview: coding-assistants/overview.md
+    - Claude Code Deep Dive: coding-assistants/claude-code.md
+  - Agent Frameworks:
+    - Landscape: agent-frameworks/landscape.md
+    - OpenClaw Internals: agent-frameworks/openclaw.md
+  - Protocols:
+    - MCP: protocols/mcp.md
+    - Tool Use Patterns: protocols/tool-use.md
+  - RAG:
+    - RAG Architectures: rag/architectures.md
+    - Vector Databases: rag/vector-dbs.md
+  - Patterns:
+    - Agentic Workflows: patterns/agentic-workflows.md
+    - Skills and Hooks: patterns/skills-hooks.md
+  - Trends:
+    - 2026-04: trends/2026-04.md
+  - Deep Reads:
+    - Index: deep-reads/index.md
